@@ -1,0 +1,151 @@
+-- Made by MK3M8 best exploit ever
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Notworking = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local TextButton_2 = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+
+--Properties:
+
+Notworking.Name = "Not working"
+Notworking.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Notworking.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Notworking
+Frame.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+Frame.Position = UDim2.new(0.0178156476, 0, 0.466257662, 0)
+Frame.Size = UDim2.new(0, 415, 0, 69)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Frame_2.Position = UDim2.new(0, 0, 1, 0)
+Frame_2.Size = UDim2.new(0, 415, 0, 337)
+
+TextButton.Parent = Frame_2
+TextButton.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+TextButton.Position = UDim2.new(0, 0, 0.0822784826, 0)
+TextButton.Size = UDim2.new(0, 415, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Auto Farm"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+TextLabel.Parent = Frame_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Size = UDim2.new(0, 415, 0, 26)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Game Selected: Anime Fighters Simulator"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TextButton_2.Parent = Frame_2
+TextButton_2.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+TextButton_2.Position = UDim2.new(0, 0, 0.240506321, 0)
+TextButton_2.Size = UDim2.new(0, 415, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "Kill All"
+TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.197590366, 0, 0.130434781, 0)
+TextLabel_2.Size = UDim2.new(0, 259, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSansSemibold
+TextLabel_2.Text = "3p1k V4 FE Hub"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.06746988, 0, 3.34782624, 0)
+TextLabel_3.Size = UDim2.new(0, 359, 0, 120)
+TextLabel_3.Font = Enum.Font.SourceSansSemibold
+TextLabel_3.Text = "MORE SCRIPTS COMING SOON!!! MADE BY MK3M8 CHECK HIM OUT!!"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+-- Scripts:
+
+local function QTGYF_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/JRL-lav/Scripts/main/anime%20fighter"))()
+	end)
+end
+coroutine.wrap(QTGYF_fake_script)()
+local function MUFDDBO_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/pspboy08/dollhouse/main/AFSGUI.lua')))()
+	end)
+end
+coroutine.wrap(MUFDDBO_fake_script)()
+local function ZNHSSJ_fake_script() -- Frame.SmoothDrag 
+	local script = Instance.new('LocalScript', Frame)
+
+	local Drag = script.Parent.Parent.Frame
+	gsCoreGui = game:GetService("CoreGui")
+	gsTween = game:GetService("TweenService")
+	local UserInputService = game:GetService("UserInputService")
+		local dragging
+		local dragInput
+		local dragStart
+		local startPos
+		local function update(input)
+			local delta = input.Position - dragStart
+			local dragTime = 0.04
+			local SmoothDrag = {}
+			SmoothDrag.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			local dragSmoothFunction = gsTween:Create(Drag, TweenInfo.new(dragTime, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), SmoothDrag)
+			dragSmoothFunction:Play()
+		end
+		Drag.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = input.Position
+				startPos = Drag.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+		Drag.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		UserInputService.InputChanged:Connect(function(input)
+			if input == dragInput and dragging and Drag.Size then
+				update(input)
+			end
+		end)
+	
+end
+coroutine.wrap(ZNHSSJ_fake_script)()
