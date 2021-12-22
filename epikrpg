@@ -1,0 +1,132 @@
+-- Admin
+-- Instances:
+
+local epik = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local farm = Instance.new("TextButton")
+local aura = Instance.new("TextButton")
+local epic = Instance.new("TextButton")
+local epic2 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+epik.Name = "epik"
+epik.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+epik.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = epik
+Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.703427732, 0, 0.503067493, 0)
+Frame.Size = UDim2.new(0, 366, 0, 41)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 1, 0)
+Frame_2.Size = UDim2.new(0, 366, 0, 166)
+
+farm.Name = "farm"
+farm.Parent = Frame_2
+farm.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+farm.BorderSizePixel = 0
+farm.Size = UDim2.new(0, 164, 0, 66)
+farm.Font = Enum.Font.SourceSans
+farm.Text = "Start Auto Farm"
+farm.TextColor3 = Color3.fromRGB(255, 255, 255)
+farm.TextScaled = true
+farm.TextSize = 14.000
+farm.TextWrapped = true
+
+aura.Name = "aura"
+aura.Parent = Frame_2
+aura.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+aura.BorderSizePixel = 0
+aura.Position = UDim2.new(0.551912546, 0, 0, 0)
+aura.Size = UDim2.new(0, 164, 0, 66)
+aura.Font = Enum.Font.SourceSans
+aura.Text = "Start Kill Aura"
+aura.TextColor3 = Color3.fromRGB(255, 255, 255)
+aura.TextScaled = true
+aura.TextSize = 14.000
+aura.TextWrapped = true
+
+epic.Name = "epic"
+epic.Parent = Frame_2
+epic.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+epic.BorderSizePixel = 0
+epic.Position = UDim2.new(0, 0, 0.602409661, 0)
+epic.Size = UDim2.new(0, 164, 0, 66)
+epic.Font = Enum.Font.SourceSans
+epic.Text = "Start Another Script Hub"
+epic.TextColor3 = Color3.fromRGB(255, 255, 255)
+epic.TextScaled = true
+epic.TextSize = 14.000
+epic.TextWrapped = true
+
+epic2.Name = "epic2"
+epic2.Parent = Frame_2
+epic2.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+epic2.BorderSizePixel = 0
+epic2.Position = UDim2.new(0.551912546, 0, 0.602409661, 0)
+epic2.Size = UDim2.new(0, 164, 0, 66)
+epic2.Font = Enum.Font.SourceSans
+epic2.Text = "Start Level 1000"
+epic2.TextColor3 = Color3.fromRGB(255, 255, 255)
+epic2.TextScaled = true
+epic2.TextSize = 14.000
+epic2.TextWrapped = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.308743179, 0, 0.170731708, 0)
+TextLabel.Size = UDim2.new(0, 139, 0, 26)
+TextLabel.Font = Enum.Font.SourceSansSemibold
+TextLabel.Text = "Epik RPG Simulator GUI"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function ICQT_fake_script() -- farm.LocalScript 
+	local script = Instance.new('LocalScript', farm)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		while wait() do
+			game.ReplicatedStorage.Events.attack:FireServer("Slash")
+			game.ReplicatedStorage.Events.attack:FireServer("T")
+			game.ReplicatedStorage.Events.attack:FireServer("E")
+		end
+	end)
+end
+coroutine.wrap(ICQT_fake_script)()
+local function GRXTBY_fake_script() -- aura.LocalScript 
+	local script = Instance.new('LocalScript', aura)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		print("Script outdated... Try another!")
+	end)
+end
+coroutine.wrap(GRXTBY_fake_script)()
+local function OOLS_fake_script() -- epic.LocalScript 
+	local script = Instance.new('LocalScript', epic)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/xunniez/Simulator/main/final", true))()
+	end)
+end
+coroutine.wrap(OOLS_fake_script)()
+local function ZRZUZHY_fake_script() -- epic2.LocalScript 
+	local script = Instance.new('LocalScript', epic2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game.Players.LocalPlayer.Stats:WaitForChild("Lvl")
+	end)
+end
+coroutine.wrap(ZRZUZHY_fake_script)()
