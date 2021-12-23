@@ -1,0 +1,209 @@
+-- Epik Admin
+-- Instances:
+
+local EpikAdminGUI = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local kick = Instance.new("TextButton")
+local flatten = Instance.new("TextButton")
+local kill = Instance.new("TextButton")
+local sink = Instance.new("TextButton")
+local target = Instance.new("TextBox")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+EpikAdminGUI.Name = "Epik Admin GUI"
+EpikAdminGUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+EpikAdminGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = EpikAdminGUI
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BackgroundTransparency = 0.200
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.759876072, 0, 0.402453989, 0)
+Frame.Size = UDim2.new(0, 300, 0, 58)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+Frame_2.BackgroundTransparency = 0.200
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 1, 0)
+Frame_2.Size = UDim2.new(0, 300, 0, 239)
+
+kick.Name = "kick"
+kick.Parent = Frame_2
+kick.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
+kick.BackgroundTransparency = 0.400
+kick.Position = UDim2.new(0, 0, -0.012931034, 0)
+kick.Size = UDim2.new(0, 300, 0, 49)
+kick.Font = Enum.Font.SourceSans
+kick.Text = "Kick Player"
+kick.TextColor3 = Color3.fromRGB(255, 255, 255)
+kick.TextScaled = true
+kick.TextSize = 14.000
+kick.TextWrapped = true
+
+flatten.Name = "flatten"
+flatten.Parent = Frame_2
+flatten.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
+flatten.BackgroundTransparency = 0.400
+flatten.Position = UDim2.new(0, 0, 0.198275864, 0)
+flatten.Size = UDim2.new(0, 300, 0, 49)
+flatten.Font = Enum.Font.SourceSans
+flatten.Text = "Flatten Player"
+flatten.TextColor3 = Color3.fromRGB(255, 255, 255)
+flatten.TextScaled = true
+flatten.TextSize = 14.000
+flatten.TextWrapped = true
+
+kill.Name = "kill"
+kill.Parent = Frame_2
+kill.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
+kill.BackgroundTransparency = 0.400
+kill.Position = UDim2.new(0, 0, 0.409482777, 0)
+kill.Size = UDim2.new(0, 300, 0, 49)
+kill.Font = Enum.Font.SourceSans
+kill.Text = "Kill Player"
+kill.TextColor3 = Color3.fromRGB(255, 255, 255)
+kill.TextScaled = true
+kill.TextSize = 14.000
+kill.TextWrapped = true
+
+sink.Name = "sink"
+sink.Parent = Frame_2
+sink.BackgroundColor3 = Color3.fromRGB(125, 125, 125)
+sink.BackgroundTransparency = 0.400
+sink.Position = UDim2.new(0, 0, 0.620689631, 0)
+sink.Size = UDim2.new(0, 300, 0, 49)
+sink.Font = Enum.Font.SourceSans
+sink.Text = "Sink Player"
+sink.TextColor3 = Color3.fromRGB(255, 255, 255)
+sink.TextScaled = true
+sink.TextSize = 14.000
+sink.TextWrapped = true
+
+target.Name = "target"
+target.Parent = Frame_2
+target.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+target.Position = UDim2.new(0, 0, 0.824267805, 0)
+target.Size = UDim2.new(0, 300, 0, 42)
+target.Font = Enum.Font.SourceSans
+target.PlaceholderText = "Player Name Here"
+target.Text = ""
+target.TextColor3 = Color3.fromRGB(255, 255, 255)
+target.TextSize = 14.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0799999982, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 252, 0, 54)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Epik Admin by MFStudios"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+-- SLAVE'S WORK
+
+for i,slaves in pairs(game:GetDescendants()) do
+	if slaves.Name == "DestroySegway" then
+		print("no u")
+
+
+local function VNTWXDO_fake_script() -- kick.LocalScript 
+	local script = Instance.new('LocalScript', kick)
+			kick.MouseButton1Down:Connect(function()
+				if string.lower(target.Text) == "all" then
+					for i,c in pairs(game.Players:GetPlayers()) do
+						local ohok = c
+						slaves:FireServer(ohok, {Value = ohok})
+					end
+				else
+					slaves:FireServer(game.Players:FindFirstChild(target.Text), {Value = game.Players:FindFirstChild(target.Text)})
+				end
+			end)
+	
+end
+coroutine.wrap(VNTWXDO_fake_script)()
+local function HMWHR_fake_script() -- flatten.LocalScript 
+	local script = Instance.new('LocalScript', flatten)
+
+	
+end
+coroutine.wrap(HMWHR_fake_script)()
+local function UTFZTCR_fake_script() -- kill.LocalScript 
+	local script = Instance.new('LocalScript', kill)
+			if string.lower(target.Text) == "all" then
+				for i,c in pairs(game.Players:GetPlayers()) do
+					local ohok = c.Character["Head"]
+					slaves:FireServer(ohok, {Value = ohok})
+				end
+			else
+				if game.Players:FindFirstChild(target.Text) then
+					if game.Players:FindFirstChild(target.Text).Character then
+						slaves:FireServer(game.Players:FindFirstChild(target.Text).Character.Head, {Value = game.Players:FindFirstChild(target.Text).Character.Head}) else
+						print("nibba who this")
+	
+end
+coroutine.wrap(UTFZTCR_fake_script)()
+local function NDTLCPY_fake_script() -- sink.LocalScript 
+	local script = Instance.new('LocalScript', sink)
+			if string.lower(target.Text) == "all" then
+				for i,c in pairs(game.Players:GetPlayers()) do
+					local ohok = c.Character.HumanoidRootPart
+					slaves:FireServer(ohok, {Value = ohok})
+				end
+			else
+				slaves:FireServer(game.Players:FindFirstChild(target.Text).Character["HumanoidRootPart"], {Value = game.Players:FindFirstChild(target.Text).Character["HumanoidRootPart"]})
+			end
+		end
+	
+end
+coroutine.wrap(NDTLCPY_fake_script)()
+local function NCKG_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+
+coroutine.wrap(NCKG_fake_script)()
